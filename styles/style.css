@@ -23,7 +23,7 @@ body {
     --text-colorC: rgb(209, 209, 9);
 
     --font-um: 12rem;
-    --font-umresp: 4rem;
+    --font-umresp: 4.2rem;
     --font-dois: 3rem;
     --font-doisresp: 1.5rem;
 }
@@ -132,6 +132,31 @@ header .acess ul li:hover {
     opacity: 0.2;
     letter-spacing: 4px;
 }
+
+.home-title:nth-child(5) {
+    position: absolute;
+    font-size: var(--font-um);
+    font-weight: 500;
+    z-index: 2;
+    color: #ffffff;
+
+    opacity: 0.2;
+    letter-spacing: 4px;
+    display: none;
+}
+
+.home-title:nth-child(6) {
+    position: absolute;
+    font-size: var(--font-um);
+    font-weight: 500;
+    z-index: 2;
+    color: #ffffff;
+
+    opacity: 0.2;
+    letter-spacing: 4px;
+    display: none;
+}
+
 /* .block {
     height: 10px;
     width: 400px;
@@ -308,14 +333,41 @@ iframe {
     .home-title:nth-child(1),
     .home-title:nth-child(2),
     .home-title:nth-child(3),
-    .home-title:nth-child(4) {
+    .home-title:nth-child(4),
+    .home-title:nth-child(5),
+    .home-title:nth-child(6) {
         font-size: var(--font-umresp);
         letter-spacing: -0.05rem;
         opacity: 1;
+        display: block;
+    }
+
+    .home-title:nth-child(1) {
+        transform: translateY(-180px);
+    }
+
+    .home-title:nth-child(2) {
+        transform: translateY(-100px);
+    }
+
+    .home-title:nth-child(3) {
+        transform: translateY(-10px);
+    }
+
+    .home-title:nth-child(4) {
+        transform: translateY(80px);
+    }
+
+    .home-title:nth-child(5) {
+        transform: translateY(160px);
+    }
+
+    .home-title:nth-child(6) {
+        transform: translateY(240px);
     }
 
     .home img {
-        height: 50%;
+        height: 40%;
         width: 100%;
     }
 
@@ -333,12 +385,70 @@ iframe {
         width: 100%;
     }
 
+    .card {
+        gap: 0;
+    }
+
     .box {
         height: 200px;
         width: 160px;
     }
 
     .wrapper {
-        padding-left: 45px;
+        margin-left: 40px;
+        gap: 10px;
+    }
+}
+
+@media (width < 430px) {
+    .home-title:nth-child(1),
+    .home-title:nth-child(2),
+    .home-title:nth-child(3),
+    .home-title:nth-child(4),
+    .home-title:nth-child(5),
+    .home-title:nth-child(6) {
+        font-size: 3.3rem;
+        letter-spacing: -0.05rem;
+        opacity: 1;
+    }
+
+    .home img {
+        height: 40%;
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .container-r-items {
+        font-size: 1rem;
+    }
+
+    .container-r-title {
+        font-size: 1.8rem;
+    }
+
+    iframe {
+        margin-top: 30px;
+        height: 50%;
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 1.8rem;
+    }
+
+    .box {
+        height: 180px;
+        width: 140px;
+
+        .box-title {
+            font-size: 1.2rem;
+        }
+    }
+
+    .wrapper {
+        margin-left: 30px;
     }
 }
