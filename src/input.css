@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    font-family: "Oswald", serif;
+}
+
+#menutitle {
+    font-family: "Oswald", serif;
+}
+
+main img,
+main h1,
+main p {
+    animation: animate 1s ease-in-out;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 10;
+        filter: blur(0);
+        transform: translate(0);
+    }
+}
+
+#icon {
+    display: none;
+}
+
+#menu-item1 {
+    display: block;
+}
+
+#menu-item2,
+#menu-item3,
+#menu-item4 {
+    display: none;
+}
+
+@media (width < 768px) {
+    nav ul li {
+        display: none;
+    }
+
+    #icon {
+        display: block;
+    }
+}
