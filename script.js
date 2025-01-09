@@ -15,7 +15,6 @@ ScrollReveal().reveal("#menu-item1", {
     duration: 2000,
     distance: "5%",
     easing: "ease",
-    reset: true,
 });
 
 //
@@ -102,10 +101,9 @@ checkoutBtn.addEventListener("click", function () {
         .join("");
 
     const message = encodeURIComponent(cartItems);
-    const phone = "984319242";
 
     window.open(
-        `https://wa.me/${phone}?text=${message} Endereço: ${adress.value}`,
+        `https://wa.me/5533984319242?text=${message} Endereço: ${adress.value}`,
         "_blank"
     );
 
