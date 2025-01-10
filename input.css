@@ -9,7 +9,6 @@
     list-style: none;
     text-decoration: none;
     outline: none;
-    scroll-behavior: smooth;
     scrollbar-width: none;
 }
 
@@ -24,8 +23,10 @@ main {
     font-family: "Oswald", serif;
 }
 
-#menutitle {
-    font-family: "Oswald", serif;
+#menutitle,
+#nav-title,
+#local-title {
+    font-family: "Ranchers", serif;
 }
 
 main img,
@@ -69,4 +70,11 @@ main p {
     #icon {
         display: block;
     }
+}
+
+#carrossel {
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

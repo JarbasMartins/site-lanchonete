@@ -1,21 +1,48 @@
 ScrollReveal().reveal("#menutitle", {
-    origin: "top",
-    duration: 1000,
-    distance: "30%",
+    origin: "left",
+    duration: 2000,
+    distance: "2%",
+    easing: "ease",
 });
 
 ScrollReveal().reveal("#menu-items", {
-    origin: "top",
-    duration: 1500,
-    distance: "20%",
+    origin: "right",
+    duration: 2000,
+    distance: "2%",
+    easing: "ease",
 });
 
 ScrollReveal().reveal("#menu-item1", {
     origin: "top",
     duration: 2000,
-    distance: "5%",
+    distance: "2%",
     easing: "ease",
 });
+
+ScrollReveal().reveal("#local-title", {
+    origin: "right",
+    duration: 2000,
+    distance: "30%",
+    easing: "ease",
+});
+
+const images = [
+    "/assets/local2.jpg",
+    "assets/local1.jpg",
+    "assets/local3.jpeg",
+];
+
+let currentImageIndex = 0;
+const carouselElement = document.getElementById("carrossel");
+
+function changeBackgroundImage() {
+    carouselElement.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+
+setInterval(changeBackgroundImage, 6000);
+
+changeBackgroundImage();
 
 //
 //
