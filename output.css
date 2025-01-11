@@ -562,8 +562,16 @@ video {
   left: 0px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .z-\[99\] {
@@ -668,6 +676,10 @@ video {
   height: 24rem;
 }
 
+.h-\[30vh\] {
+  height: 30vh;
+}
+
 .h-\[85vh\] {
   height: 85vh;
 }
@@ -720,6 +732,10 @@ video {
   flex-direction: column;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -738,6 +754,10 @@ video {
 
 .justify-around {
   justify-content: space-around;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-2 {
@@ -821,11 +841,6 @@ video {
   background-color: rgb(96 165 250 / var(--tw-bg-opacity, 1));
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
-}
-
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
@@ -886,6 +901,11 @@ video {
   background-color: rgb(161 161 170 / var(--tw-bg-opacity, 1));
 }
 
+.bg-red-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 27 27 / var(--tw-bg-opacity, 1));
+}
+
 .bg-home {
   background-image: url(/assets/papeldeparedeinfo.png);
 }
@@ -916,6 +936,10 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .px-2 {
@@ -1125,6 +1149,10 @@ main p {
   #icon {
     display: block;
   }
+
+  .mobile-menu-icon {
+    display: block;
+  }
 }
 
 #carrossel {
@@ -1174,6 +1202,11 @@ main p {
 .hover\:bg-red-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-red-950:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 10 10 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-gray-900:hover {

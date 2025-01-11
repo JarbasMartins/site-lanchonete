@@ -48,37 +48,98 @@
             </h1>
 
             <ul class="flex gap-6 cursor-pointer">
-                <li class="text-slate-50 hover:text-rose-800 transition">
+                <li
+                    class="text-slate-50 hover:text-rose-800 transition nav-item"
+                >
                     <i class="fa-solid fa-phone h-3"></i>
                 </li>
-                <li class="text-slate-50 hover:text-rose-800 transition">
+                <li
+                    class="text-slate-50 hover:text-rose-800 transition nav-item"
+                >
                     <a href="https://www.instagram.com/jarbas.martins7/"
                         ><i class="fa-brands fa-instagram h-3"></i
                     ></a>
                 </li>
 
-                <li class="text-slate-50 hover:text-rose-800 transition">
-                    <i class="fa-brands fa-whatsapp h-3"></i>
+                <li
+                    class="text-slate-50 hover:text-rose-800 transition nav-item"
+                >
+                    <a href="https://wa.me/5533984319242"
+                        ><i class="fa-brands fa-whatsapp h-3"></i
+                    ></a>
                 </li>
             </ul>
 
             <ul class="flex gap-3 cursor-pointer">
                 <li
-                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition"
+                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item"
                 >
                     Estabelecimentos
                 </li>
                 <li
-                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition"
-                    id="cart-btn"
+                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item"
+                    onclick="openModal()"
                 >
                     Meus Pedidos
                 </li>
             </ul>
-            <div id="icon" class="text-slate-50">
-                <i class="fa-solid fa-bars"></i>
+            <div class="text-slate-50 mobile-menu-icon hidden">
+                <button onclick="menuMobShow()">
+                    <i id="icon" class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- SIDE BAR -->
+
+        <div
+            id="menu-mobile"
+            class="flex fixed right-0 top-0 bg-gray-900 z-40 rounded-md h-[30vh] hidden"
+        >
+            <ul class="flex gap-6 flex-col p-4 items-end justify-start">
+                <ul class="flex gap-10">
+                    <li
+                        class="text-slate-50 hover:text-rose-800 transition nav-item cursor-pointer"
+                    >
+                        <i class="fa-solid fa-phone h-3"></i>
+                    </li>
+                    <li
+                        class="text-slate-50 hover:text-rose-800 transition nav-item cursor-pointer"
+                    >
+                        <a href="https://www.instagram.com/jarbas.martins7/"
+                            ><i class="fa-brands fa-instagram h-3"></i
+                        ></a>
+                    </li>
+                    <li
+                        class="text-slate-50 hover:text-rose-800 transition nav-item cursor-pointer"
+                    >
+                        <a href="https://wa.me/5533984319242"
+                            ><i class="fa-brands fa-whatsapp h-3"></i
+                        ></a>
+                    </li>
+                </ul>
+
+                <li
+                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item cursor-pointer"
+                >
+                    Estabelecimentos
+                </li>
+                <li
+                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item cursor-pointer"
+                    onclick="openModal()"
+                >
+                    Meus Pedidos
+                </li>
+                <button
+                    class="text-white bg-red-800 hover:bg-red-950 p-2 rounded-md"
+                    onclick="menuMobClose()"
+                >
+                    Fechar
+                </button>
+            </ul>
+        </div>
+
+        <!-- HOME -->
 
         <main
             class="flex flex-col items-center justify-start bg-home bg-no-repeat bg-cover bg-center w-full h-[85vh] md:h-[100vh]"
@@ -100,6 +161,8 @@
         </main>
 
         <!-- FIM HEADER E HOME -->
+
+        <!-- MENU -->
 
         <h2
             id="menutitle"
@@ -140,6 +203,8 @@
                 />
             </div>
         </div>
+
+        <!-- FIM MENU -->
 
         <!-- cards items -->
 

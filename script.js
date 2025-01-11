@@ -41,6 +41,18 @@ function showToastify() {
     }).showToast();
 }
 
+function menuMobShow() {
+    const menuMobile = document.getElementById("menu-mobile");
+
+    menuMobile.style.display = "block";
+}
+
+function menuMobClose(event) {
+    const menuMobile = document.getElementById("menu-mobile");
+
+    menuMobile.style.display = "none";
+}
+
 //
 //
 //
@@ -82,11 +94,16 @@ const adressWarn = document.getElementById("adress-warn");
 
 let cart = [];
 
-cartBtn.addEventListener("click", function () {
+// cartBtn.addEventListener("click", function () {
+//     updateCartModal();
+//     cartModal.style.display = "flex";
+//     console.log(cartBtn);
+// });
+
+function openModal() {
     updateCartModal();
     cartModal.style.display = "flex";
-    console.log(cartBtn);
-});
+}
 
 closeModal.addEventListener("click", function () {
     cartModal.style.display = "none";
