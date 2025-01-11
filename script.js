@@ -20,11 +20,30 @@ ScrollReveal().reveal("#menu-item1", {
 });
 
 ScrollReveal().reveal("#local-title", {
-    origin: "right",
+    origin: "top",
     duration: 2000,
-    distance: "30%",
+    distance: "20%",
     easing: "ease",
 });
+
+function showToastify() {
+    Toastify({
+        text: "Pedido adicionado",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+    }).showToast();
+}
+
+//
+//
+//
 
 const images = [
     "/assets/local2.jpg",
@@ -58,7 +77,6 @@ const closeModal = document.getElementById("close-modal-btn");
 const cartItemsContainer = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
 const checkoutBtn = document.getElementById("checkout");
-const cartCount = document.getElementById("cart-count");
 const adress = document.getElementById("adress");
 const adressWarn = document.getElementById("adress-warn");
 
@@ -67,6 +85,7 @@ let cart = [];
 cartBtn.addEventListener("click", function () {
     updateCartModal();
     cartModal.style.display = "flex";
+    console.log(cartBtn);
 });
 
 closeModal.addEventListener("click", function () {
@@ -226,8 +245,6 @@ function updateCartModal() {
         style: "currency",
         currency: "BRL",
     });
-
-    cartCount.innerHTML = cart.length;
 }
 
 //
@@ -313,8 +330,6 @@ function updateCartModal() {
         style: "currency",
         currency: "BRL",
     });
-
-    cartCount.innerHTML = cart.length;
 }
 
 //
@@ -403,8 +418,6 @@ function updateCartModal() {
         style: "currency",
         currency: "BRL",
     });
-
-    cartCount.innerHTML = cart.length;
 }
 
 //
@@ -493,6 +506,4 @@ function updateCartModal() {
         style: "currency",
         currency: "BRL",
     });
-
-    cartCount.innerHTML = cart.length;
 }
