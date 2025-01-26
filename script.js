@@ -28,7 +28,7 @@ ScrollReveal().reveal("#local-title", {
 
 function showToastify() {
     Toastify({
-        text: "Pedido adicionado",
+        text: "PEDIDO ADICIONADO",
         duration: 3000,
         newWindow: true,
         close: true,

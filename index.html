@@ -49,12 +49,12 @@
 
             <ul class="flex gap-6 cursor-pointer">
                 <li
-                    class="text-slate-50 hover:text-rose-800 transition nav-item"
+                    class="text-slate-50 hover:text-red-600 transition nav-item"
                 >
                     <i class="fa-solid fa-phone h-3"></i>
                 </li>
                 <li
-                    class="text-slate-50 hover:text-rose-800 transition nav-item"
+                    class="text-slate-50 hover:text-red-600 transition nav-item"
                 >
                     <a href="https://www.instagram.com/jarbas.martins7/"
                         ><i class="fa-brands fa-instagram h-3"></i
@@ -62,7 +62,7 @@
                 </li>
 
                 <li
-                    class="text-slate-50 hover:text-rose-800 transition nav-item"
+                    class="text-slate-50 hover:text-red-600 transition nav-item"
                 >
                     <a href="https://wa.me/5533984319242"
                         ><i class="fa-brands fa-whatsapp h-3"></i
@@ -72,12 +72,12 @@
 
             <ul class="flex gap-3 cursor-pointer">
                 <li
-                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item"
+                    class="text-slate-50 font-medium font-sans hover:text-red-600 transition nav-item"
                 >
                     Estabelecimentos
                 </li>
                 <li
-                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item"
+                    class="text-slate-50 font-medium font-sans hover:text-red-600 transition nav-item"
                     onclick="openModal()"
                 >
                     Meus Pedidos
@@ -94,10 +94,21 @@
 
         <div
             id="menu-mobile"
-            class="flex fixed right-0 top-0 bg-gray-900 z-40 rounded-md h-[30vh] hidden"
+            class="fixed right-0 top-0 bg-gray-900 z-40 rounded-md h-[30vh] hidden"
         >
             <ul class="flex gap-6 flex-col p-4 items-end justify-start">
-                <ul class="flex gap-10">
+                <li
+                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item cursor-pointer"
+                >
+                    Estabelecimentos
+                </li>
+                <li
+                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item cursor-pointer"
+                    onclick="openModal()"
+                >
+                    Meus Pedidos
+                </li>
+                <ul class="flex gap-7 bg-gray-700 p-3 rounded-full">
                     <li
                         class="text-slate-50 hover:text-rose-800 transition nav-item cursor-pointer"
                     >
@@ -118,18 +129,6 @@
                         ></a>
                     </li>
                 </ul>
-
-                <li
-                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item cursor-pointer"
-                >
-                    Estabelecimentos
-                </li>
-                <li
-                    class="text-slate-50 font-medium font-sans hover:text-rose-800 transition nav-item cursor-pointer"
-                    onclick="openModal()"
-                >
-                    Meus Pedidos
-                </li>
                 <button
                     class="text-white bg-red-800 hover:bg-red-950 p-2 rounded-md"
                     onclick="menuMobClose()"
@@ -166,7 +165,7 @@
 
         <h2
             id="menutitle"
-            class="text-center text-4xl md:text-7xl uppercase font-extrabold mb-6 mt-9 text-red-600"
+            class="text-center text-6xl md:text-7xl uppercase font-extrabold mb-6 mt-9 text-red-600"
         >
             Nosso Menu
         </h2>
@@ -401,7 +400,7 @@
                         >
                             <p class="font-bold text-lg">R$25,50</p>
                             <button
-                                class="bg-gray-900 px-5 rounded add-to-cart-btn hover:bg-gray-400 transition add-to-cart-btn"
+                                class="bg-gray-900 px-5 rounded hover:bg-gray-400 transition add-to-cart-btn"
                                 data-price="25.50"
                                 data-name="Hamburguer Smash"
                                 onclick="showToastify()"
@@ -677,7 +676,7 @@
                         class="h-28 w-36 hover:scale-125 hover:-rotate-3 duration-300"
                     />
                     <div>
-                        <p class="font-bold">MilkShakes's</p>
+                        <p class="font-bold">MilkShake's</p>
                         <p class="font-normal">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Officia odio perferendis quia quidem dolor id.
@@ -895,7 +894,7 @@
         </div>
 
         <h2
-            class="text-3xl font-bold text-center md:text-7xl md:mt-52 md:mb-10 u text-red-600"
+            class="text-5xl font-bold text-center mb-5 md:text-7xl md:mt-52 md:mb-10 u text-red-600"
             id="local-title"
         >
             VENHA NOS VISITAR
@@ -903,10 +902,10 @@
 
         <div class="w-full h-60 md:h-[600px] md:mx-auto" id="carrossel"></div>
 
-        <div class="text-center bg-gray-300 pb-2">
+        <div class="text-center bg-gray-800 pb-2 text-white">
             <a
                 href="#"
-                class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900"
+                class="flex items-center justify-center mb-5 text-2xl font-semibold"
             >
                 <img
                     src="assets/Red_and_Yellow_Simple_Modern_Burger_Restaurant_Logo-removebg-preview.png"
@@ -915,13 +914,13 @@
                 />
             </a>
 
-            <span class="block text-sm text-center text-gray-500"
+            <span class="block text-sm text-center"
                 >© 2023-2025 Burg™. Todos os Direitos Reservados.
             </span>
 
             <ul class="flex justify-center mt-5 space-x-5">
                 <li>
-                    <a href="#" class="text-gray-500 hover:text-gray-900">
+                    <a href="#" class="hover:text-red-600">
                         <svg
                             class="w-5 h-5"
                             fill="currentColor"
@@ -937,7 +936,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="text-gray-500 hover:text-gray-900">
+                    <a href="#" class="hover:text-red-600">
                         <svg
                             class="w-5 h-5"
                             fill="currentColor"
@@ -954,7 +953,7 @@
                 </li>
 
                 <li>
-                    <a href="#" class="text-gray-500 hover:text-gray-900">
+                    <a href="#" class="hover:text-red-600">
                         <svg
                             class="w-5 h-5"
                             fill="currentColor"
