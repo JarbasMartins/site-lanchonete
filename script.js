@@ -28,7 +28,7 @@ ScrollReveal().reveal("#local-title", {
 
 function showToastify() {
     Toastify({
-        text: "PEDIDO ADICIONADO",
+        text: "Pedido ADD!",
         duration: 3000,
         newWindow: true,
         close: true,
@@ -71,7 +71,7 @@ function changeBackgroundImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
 }
 
-setInterval(changeBackgroundImage, 6000);
+setInterval(changeBackgroundImage, 4000);
 
 changeBackgroundImage();
 
@@ -91,6 +91,7 @@ const cartTotal = document.getElementById("cart-total");
 const checkoutBtn = document.getElementById("checkout");
 const adress = document.getElementById("adress");
 const adressWarn = document.getElementById("adress-warn");
+const cartCounter = document.getElementById("cart-count");
 
 let cart = [];
 
@@ -137,6 +138,7 @@ function removeItemCart(name) {
     }
 
     cart.splice(index, 1);
+    cartCounter.innerHTML = cart.length;
     updateCartModal();
 }
 
@@ -159,7 +161,7 @@ checkoutBtn.addEventListener("click", function () {
 
     const cartItems = cart
         .map((item) => {
-            return `${item.name}, Quantidade: ${item.quantity}, Preço: R$${item.price} |`;
+            return ` ${item.name}, Quantidade: ${item.quantity}, Preço: R$${item.price} | `;
         })
         .join("");
 
@@ -171,6 +173,7 @@ checkoutBtn.addEventListener("click", function () {
     );
 
     cart = [];
+    cartCounter.innerHTML = 0;
     updateCartModal();
 });
 
@@ -201,6 +204,8 @@ menuUm.addEventListener("click", function (event) {
         const price = parseFloat(parentButton.getAttribute("data-price"));
         addToCart(name, price);
     }
+
+    cartCounter.innerHTML = cart.length;
 });
 
 function addToCart(name, price) {
@@ -235,7 +240,7 @@ function updateCartModal() {
         );
 
         cartItemElement.innerHTML = `
-        <div class"flex items-center justify-between">
+        <div class"flex items-center justify-between overflow-y-scroll ">
              <div>
                  <p class="font-medium" >${item.name}</p>
                  <p>Qtd: ${item.quantity}</p>
@@ -288,6 +293,8 @@ menuDois.addEventListener("click", function (event) {
         const price = parseFloat(parentButton.getAttribute("data-price"));
         addToCart(name, price);
     }
+
+    cartCounter.innerHTML = cart.length;
 });
 
 function addToCart(name, price) {
@@ -347,6 +354,8 @@ function updateCartModal() {
         style: "currency",
         currency: "BRL",
     });
+
+    cartCounter.innerHTML = cart.length;
 }
 
 //
@@ -376,6 +385,8 @@ menuTres.addEventListener("click", function (event) {
         const price = parseFloat(parentButton.getAttribute("data-price"));
         addToCart(name, price);
     }
+
+    cartCounter.innerHTML = cart.length;
 });
 
 function addToCart(name, price) {
@@ -464,6 +475,8 @@ menuQuatro.addEventListener("click", function (event) {
         const price = parseFloat(parentButton.getAttribute("data-price"));
         addToCart(name, price);
     }
+
+    cartCounter.innerHTML = cart.length;
 });
 
 function addToCart(name, price) {

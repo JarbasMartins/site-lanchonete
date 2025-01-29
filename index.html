@@ -39,7 +39,9 @@
     <body>
         <!-- HEADER E HOME -->
 
-        <nav class="flex items-center justify-around p-5 bg-gray-800">
+        <nav
+            class="flex items-center justify-around p-5 bg-black/40 md:fixed absolute w-full z-[99]"
+        >
             <h1
                 class="text-3xl md:text-5xl text-red-600 font-semibold"
                 id="nav-title"
@@ -70,14 +72,14 @@
                 </li>
             </ul>
 
-            <ul class="flex gap-3 cursor-pointer">
+            <ul class="flex gap-3 cursor-pointer text-base font-mono">
                 <li
-                    class="text-slate-50 font-medium font-sans hover:text-red-600 transition nav-item"
+                    class="text-slate-50 font-medium hover:text-red-600 transition nav-item"
                 >
                     Estabelecimentos
                 </li>
                 <li
-                    class="text-slate-50 font-medium font-sans hover:text-red-600 transition nav-item"
+                    class="text-slate-50 font-medium hover:text-red-600 transition nav-item"
                     onclick="openModal()"
                 >
                     Meus Pedidos
@@ -94,7 +96,7 @@
 
         <div
             id="menu-mobile"
-            class="fixed right-0 top-0 bg-gray-900 z-40 rounded-md h-[30vh] hidden"
+            class="fixed right-0 top-0 bg-gray-900 rounded-md h-[30vh] hidden z-[100]"
         >
             <ul class="flex gap-6 flex-col p-4 items-end justify-start">
                 <li
@@ -141,25 +143,49 @@
         <!-- HOME -->
 
         <main
-            class="flex flex-col items-center justify-start bg-home bg-no-repeat bg-cover bg-center w-full h-[85vh] md:h-[100vh]"
+            class="flex flex-col bg-home bg-no-repeat bg-cover bg-center w-full h-[100vh]"
         >
-            <img
-                src="/assets/Red_and_Yellow_Simple_Modern_Burger_Restaurant_Logo-removebg-preview.png"
-                alt=""
-                class="w-96 h-96 rounded-full shadow-1g"
-            />
-            <p class="text-sky-50 text-1xl uppercase font-semibold">
-                Atendemos de segunda á domingo
-            </p>
-            <h1 class="text-sky-50 font-bold text-4xl">VENHA CONHECER</h1>
-            <p
-                class="text-sky-50 uppercase font-semibold p-2 rounded-lg bg-rose-700 mt-2"
-            >
-                Avenida Dom Pedro 2, n 295
-            </p>
+            <div class="mt-20 items-center justify-start flex flex-col">
+                <img
+                    src="/assets/Red_and_Yellow_Simple_Modern_Burger_Restaurant_Logo-removebg-preview.png"
+                    alt=""
+                    class="w-96 h-96 rounded-full shadow-1g"
+                />
+                <p class="text-sky-50 text-1xl uppercase font-semibold">
+                    Atendemos de segunda á domingo
+                </p>
+                <h1 class="text-sky-50 font-bold text-4xl">VENHA CONHECER</h1>
+                <p
+                    class="text-sky-50 uppercase font-semibold p-2 rounded-lg bg-rose-700 mt-2"
+                >
+                    Avenida Dom Pedro 2, n 295
+                </p>
+            </div>
         </main>
 
         <!-- FIM HEADER E HOME -->
+
+        <!-- SOBRE NOS -->
+        <div
+            class="flex flex-col md:flex-row h-full items-center justify-center w-full p-10 bg-red-900 text-white md:hidden"
+        >
+            <div class="space-y-5">
+                <h1 class="text-3xl uppercase font-mono font-semibold">
+                    A Franquia Burg
+                </h1>
+                <p class="max-w-[40ch] font-medium info-description">
+                    A Burg é famosa por seus hambúrgueres artesanais, feitos com
+                    ingredientes frescos e de alta qualidade. Cardápio variado
+                    para todos os gostos.
+                </p>
+                <p class="max-w-[40ch] font-medium info-description">
+                    Com ambiente acolhedor e atendimento personalizado, a Burg
+                    oferece uma experiência única para os amantes de
+                    hambúrgueres.
+                </p>
+            </div>
+        </div>
+        <!-- FIM SOBRE NOS -->
 
         <!-- MENU -->
 
@@ -177,28 +203,28 @@
                 <img
                     src="/assets/icones/hamburguericoneJPG.png"
                     alt=""
-                    class="w-36 h-24 md:h-36 rounded-[50%] hover:scale-110 bg-red-200 duration-300 hover:bg-red-500"
+                    class="w-36 h-24 md:h-36 rounded-[50%] hover:scale-110 bg-red-200 duration-300 hover:bg-red-500 border-[2px] border-solid border-black"
                 />
             </div>
             <div id="item2" class="cursor-pointer">
                 <img
                     src="/assets/icones/pizzaiconeJPG.png"
                     alt=""
-                    class="w-36 h-24 md:h-36 rounded-[50%] hover:scale-110 bg-red-200 duration-300 hover:bg-red-500"
+                    class="w-36 h-24 md:h-36 rounded-[50%] hover:scale-110 bg-red-200 duration-300 hover:bg-red-500 border-[2px] border-solid border-black"
                 />
             </div>
             <div id="item3" class="cursor-pointer">
                 <img
                     src="/assets/icones/bebidasicone-removebg-preview.png"
                     alt=""
-                    class="w-36 h-24 md:h-36 rounded-[50%] hover:scale-110 bg-red-200 duration-300 hover:bg-red-500"
+                    class="w-36 h-24 md:h-36 rounded-[50%] hover:scale-110 bg-red-200 duration-300 hover:bg-red-500 border-[2px] border-solid border-black"
                 />
             </div>
             <div id="item4" class="cursor-pointer">
                 <img
                     src="/assets/icones/porcoesicone-removebg-preview.png"
                     alt=""
-                    class="w-36 h-24 md:h-36 rounded-[50%] hover:scale-110 bg-red-200 duration-300 hover:bg-red-500"
+                    class="w-36 h-24 md:h-36 rounded-[50%] hover:scale-110 bg-red-200 duration-300 hover:bg-red-500 border-[2px] border-solid border-black"
                 />
             </div>
         </div>
@@ -894,7 +920,7 @@
         </div>
 
         <h2
-            class="text-5xl font-bold text-center mb-5 md:text-7xl md:mt-52 md:mb-10 u text-red-600"
+            class="text-5xl font-bold text-center mb-5 md:text-7xl md:mt-52 md:mb-10 text-red-600 mt-20"
             id="local-title"
         >
             VENHA NOS VISITAR
@@ -902,7 +928,15 @@
 
         <div class="w-full h-60 md:h-[600px] md:mx-auto" id="carrossel"></div>
 
-        <div class="text-center bg-gray-800 pb-2 text-white">
+        <div
+            class="fixed bottom-0 right-0 w-full h-[50px] bg-black/40 flex items-center justify-center text-white text-lg cursor-pointer md:hidden gap-3"
+            onclick="openModal()"
+        >
+            <span id="cart-count">0</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <div class="text-center bg-red-900 pb-2 text-white">
             <a
                 href="#"
                 class="flex items-center justify-center mb-5 text-2xl font-semibold"

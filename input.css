@@ -17,6 +17,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: rgb(240, 226, 202);
 }
 
 main {
@@ -81,4 +82,12 @@ main p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.info-description::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    background-color: orange;
 }
